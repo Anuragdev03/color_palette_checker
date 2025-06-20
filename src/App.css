@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+
+#root {
+  margin: 0 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5,h6, p, label {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+}
+
+.container {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  padding: 1rem;
+}

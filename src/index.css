@@ -1,0 +1,17 @@
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #0d1b2a;
+  --secondary-color: #1b263b;
+  --accent-color: #778da9;
+  --bg-color: #e0e1dd;
+
+  --title: 18px;
+  --description: 16px
+}
+
