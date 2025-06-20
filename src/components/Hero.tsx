@@ -1,6 +1,6 @@
 import "./styles/header.css";
 
-export default function Header() {
+export default function HeroSection() {
     return (
         <div style={{ width: "100%" }}>
             <h6 className="logo">Color Palette Checker</h6>

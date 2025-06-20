@@ -1,12 +1,12 @@
 import './App.css'
 import Cards from './components/Cards'
-import Header from './components/header'
+import HeroSection from './components/Hero'
 
 function App() {
 
   return (
     <div className='container'>
-      <Header />
+      <HeroSection />
       <Cards />
     </div>
   )
