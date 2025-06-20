@@ -9,7 +9,9 @@ export type CardActionType =
     | "UPDATE_DESCRIPTION_1"
     | "UPDATE_TITLE_2"
     | "UPDATE_BACKGROUND_2"
-    | "UPDATE_DESCRIPTION_2";
+    | "UPDATE_DESCRIPTION_2"
+    | "UPDATE_IMAGE_1"
+    | "UPDATE_IMAGE_2";
 
 interface CardAction {
     type: CardActionType;
@@ -20,10 +22,12 @@ interface CardState {
     title1: string;
     background1: string;
     description1: string;
+    image1: string
 
     title2: string;
     background2: string;
     description2: string;
+    image2: string
 }
 
 export default function Cards() {
@@ -34,10 +38,11 @@ export default function Cards() {
         title1: "#0d1b2a",
         background1: "#FFF",
         description1: "#0d1b2a",
-
+        image1: "https://images.unsplash.com/vector-1744267025873-b6806f53717d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title2: "#000",
         background2: "#fff",
-        description2: "#000"
+        description2: "#000",
+        image2: "https://images.unsplash.com/vector-1744267025873-b6806f53717d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     })
 
 
@@ -63,6 +68,10 @@ export default function Cards() {
                 return { ...state, background2: action.payload };
             case "UPDATE_DESCRIPTION_2":
                 return { ...state, description2: action.payload };
+            case "UPDATE_IMAGE_1":
+                return { ...state, image1: action.payload};
+            case "UPDATE_IMAGE_2":
+                return { ...state, image2: action.payload }
             default:
                 return state;
         }
@@ -80,7 +89,7 @@ export default function Cards() {
                     <h3 style={{ color: card.title1 }}>Title</h3>
                     <img className="setting-icon" src={settingIcon} onClick={handleToggle1} />
                 </div>
-                <img className="card1-img" src="https://images.unsplash.com/vector-1744267025873-b6806f53717d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                <img className="card1-img" src={card.image1} />
                 <p style={{ color: card.description1 }} className="card1-desc">Instantly Preview Color Palettes on Real UI Components</p>
             </div>
         </div>
@@ -93,7 +102,7 @@ export default function Cards() {
                     <h3 style={{ color: card.title2 }}>Title</h3>
                     <img className="setting-icon" src={settingIcon} onClick={handleToggle2} />
                 </div>
-                <img className="card1-img" src="https://images.unsplash.com/vector-1744267025873-b6806f53717d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                <img className="card1-img" src={card.image2} />
                 <p style={{ color: card.description2 }} className="card1-desc">Instantly Preview Color Palettes on Real UI Components</p>
             </div>
         </div>

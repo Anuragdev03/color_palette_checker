@@ -1,4 +1,4 @@
-import { use, useReducer, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./styles/ColorSelectorModal.css";
 import { PopoverPicker } from "./PopoverPicker";
 import moveIcon from "../assets/move.png";
@@ -78,6 +78,19 @@ export default function ColorSelectorModal(props: Props) {
         }
     }
 
+    function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const url = URL.createObjectURL(file);
+
+        if (cardType === "Card 1") {
+            updateStyles("UPDATE_IMAGE_1", url)
+        } else if (cardType === "Card 2") {
+            updateStyles("UPDATE_IMAGE_2", url)
+        }
+    }
+
     return (
         <div
             ref={modalRef}
@@ -114,6 +127,11 @@ export default function ColorSelectorModal(props: Props) {
                         <input value={description} className="input" id="description" onChange={(e) => handleDescriptionColor(e.target.value)} />
                         <PopoverPicker color={descriptionColor} onChange={handleDescriptionColor} />
                     </div>
+                </div>
+
+                <div className="input-container">
+                    <label htmlFor="select-image">Change Image</label>
+                    <input id="select-image" type="file" accept="image/*" onChange={handleImageChange} />
                 </div>
             </div>
         </div>
