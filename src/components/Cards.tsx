@@ -87,9 +87,9 @@ export default function Cards() {
             <div>
                 <div className="title-container">
                     <h3 style={{ color: card.title1 }}>Title</h3>
-                    <img className="setting-icon" src={settingIcon} onClick={handleToggle1} />
+                    <img className="setting-icon" src={settingIcon} onClick={handleToggle1} alt="avoid color contrast failures" />
                 </div>
-                <img className="card1-img" src={card.image1} />
+                <img className="card1-img" src={card.image1} alt="check color contrast for buttons" />
                 <p style={{ color: card.description1 }} className="card1-desc">Instantly Preview Color Palettes on Real UI Components</p>
             </div>
         </div>
@@ -100,9 +100,9 @@ export default function Cards() {
             <div>
                 <div className="title-container">
                     <h3 style={{ color: card.title2 }}>Title</h3>
-                    <img className="setting-icon" src={settingIcon} onClick={handleToggle2} />
+                    <img className="setting-icon" src={settingIcon} onClick={handleToggle2} alt="color palette generator for UI" />
                 </div>
-                <img className="card1-img" src={card.image2} />
+                <img className="card1-img" src={card.image2} alt="Preview UI Components with Color Palettes" />
                 <p style={{ color: card.description2 }} className="card1-desc">Instantly Preview Color Palettes on Real UI Components</p>
             </div>
         </div>
@@ -134,6 +134,7 @@ export default function Cards() {
                     backgroundColor={card.background1}
                     updateStyles={updateStyle}
                     close={closeModal1}
+                    fields={["title", "background", "description", "image"]}
                 />
                 : null}
 
@@ -145,6 +146,7 @@ export default function Cards() {
                     backgroundColor={card.background2}
                     updateStyles={updateStyle}
                     close={closeModal2}
+                    fields={["title", "background", "description", "image"]}
                 />
                 : null}
         </div>

@@ -1,0 +1,99 @@
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-title {
+    font-size: var(--title);
+    text-decoration: underline;
+}
+
+.button1 {
+    background-color: white;
+    width: 200px;
+    height: 132px;
+    padding: 12px;
+    border-radius: 15px;
+    padding-top: 18px;
+}
+
+.buttons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex; /* Allows content to align centrally easily */
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between text and icon if any */
+  text-decoration: none; /* For when button is used as a link */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: 'Inter', sans-serif; /* Recommended font */
+}
+
+/* Primary variant styles */
+.button.primary {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button.primary:active {
+  background-color: #004085; /* Even darker blue on active */
+  transform: translateY(0); /* Reset lift effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary variant styles */
+.button.secondary {
+  background-color: #6c757d; /* Gray */
+  color: white;
+}
+
+.button.secondary:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button.secondary:active {
+  background-color: #495057;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled state styles */
+.button:disabled,
+.button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none; /* No lift effect when disabled */
+  box-shadow: none; /* No shadow when disabled */
+  opacity: 0.7; /* Slightly faded */
+}
+
+/* Responsive considerations */
+@media (max-width: 768px) {
+  .button {
+    padding: 12px 25px; /* Slightly larger touch target on smaller screens */
+    font-size: 15px;
+  }
+}

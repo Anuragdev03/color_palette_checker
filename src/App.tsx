@@ -1,4 +1,5 @@
 import './App.css'
+import Buttons from './components/Buttons'
 import Cards from './components/Cards'
 import HeroSection from './components/Hero'
 
@@ -8,6 +9,7 @@ function App() {
     <div className='container'>
       <HeroSection />
       <Cards />
+      <Buttons />
     </div>
   )
 }
