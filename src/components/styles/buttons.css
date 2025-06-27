@@ -96,4 +96,8 @@
     padding: 12px 25px; /* Slightly larger touch target on smaller screens */
     font-size: 15px;
   }
+
+  .buttons-list {
+    flex-direction: column;
+  }
 }
